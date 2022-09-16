@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body {
+            background-image: url("../static/images/kidney.png");
+            background-size: cover;
+        }
+
+        .container {
+            padding: 30px;
+            margin: 10px;
+            margin-right: 70%;
+        }
+
+        .container h1 {
+            text-align: center;
+            color: white;
+        }
+
+        .container .predictform form {
+            padding: 10px 30px 10px 30px;
+            text-align: center;
+
+        }
+
+        .container .predictform form input {
+            padding: 10px;
+            margin-bottom: 7px;
+            height: 10px;
+            width: 250px;
+            border-radius: 5px;
+
+        }
+
+        .container .predictform form button {
+            color: black;
+            background-color: white;
+            border: 2px solid orange;
+            width: 100px;
+            height: 40px;
+            border-radius: 10px;
+            font-weight: bolder;
+            font-size: medium;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <h1>Kidney Disease Prediction</h1>
+        <div class="predictform">
+            <form action="{{ url_for('predict3')}}" method="post">
+                <input type="text" name="BP" placeholder="BP" required="required" /> <br>
+                <input type="text" name="SG" required="required" placeholder="SG" /> <br>
+                <input type="text" name="AL" required="required" placeholder="AL" /> <br>
+                <input type="text" name="SU" required="required" placeholder="SU" /> <br>
+                <input type="text" name="RBC" required="required" placeholder="RBC" /> <br>
+                <input type="text" name="PC" required="required" placeholder="PC" /> <br>
+                <input type="text" name="PCC" required="required" placeholder="PCC" /> <br>
+                <button type="submit">Predict</button>
+
+            </form>
+        </div>
+
+    </div>
+    
+</body>
+
+</html>
